@@ -1,0 +1,23 @@
+{
+  "name": "imp_slider",
+  "version": "0.0.1",
+  "description": "JQuery plugin for creating image preview slider",
+  "main": "src/imagepreviewslider.js",
+  "keywords": [
+    "jquery",
+    "slider",
+    "image-preview"
+  ],
+  "authors": [
+    "M Arif Mahthunisnaini"
+  ],
+  "license": "MIT",
+  "homepage": "http://iznyn.io/dev/imagepreviewslider",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

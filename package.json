@@ -1,0 +1,14 @@
+{
+  "name": "imp_slider",
+  "version": "0.0.1",
+  "description": "JQuery plugin for creating image preview slider",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.6",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-less": "^0.11.4",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "qunitjs": "^1.18.0"
+  }
+}
