@@ -64,12 +64,6 @@
 		this.items  = $( '.'+this.options.itemClass, this.el );
 
 		//
-		//Styling 
-		this.items.css( 'float', 'left' );
-		this.el.css( 'overflow', 'hidden' );
-		this.slider.css( 'display', 'inline-block' );
-		
-		//
 		//Get width
 		this.elWidth		 = this.el.width();
 		this.itemCount   = this.items.length;
@@ -77,6 +71,15 @@
 		this.sliderWidth = this.itemCount * this.itemWidth;
 		this.handle.width( this.sliderWidth );
 		this.slider.width( this.itemWidth );
+		
+		//
+		//Add index to each item
+		var index = 0;
+		$( this.items ).each( function()
+		{
+			$(this).attr( 'data-index', index );
+			index++;
+		});
 		
 		//
 		//Get active item
@@ -88,6 +91,11 @@
 		//
 		//Init dragdealer
 		this._initDragDealer();
+		
+		//
+		//
+		//Init item nav
+		this._initNavigation();
 	};
 
 	/**
@@ -97,7 +105,6 @@
 	{
 		var self = this;
 		var xPos = (1/(this.itemCount-1))*(this.index);
-		console.log( xPos );
 		this.dd = new Dragdealer( this.slider[0], {
 			steps: this.itemCount,
 			speed: 0.4,
@@ -115,7 +122,41 @@
 	 */
 	imagePreviewSlider.prototype._navigate = function( x, y ) 
 	{
-		console.log(x);
+		this.items.removeClass( 'active' );
+		this.index = this.dd.getStep()[0] - 1;
+		this.current = this.items[this.index];
+		$( this.current ).addClass( 'active' );
+	};
+
+	/**
+	 * init navigation
+	 */
+	imagePreviewSlider.prototype._initNavigation = function() 
+	{
+		var self = this;
+		$( this.items ).each( function()
+		{
+			$(this).click( function()
+			{
+				self._itemNavigate( $(this) );
+				return false;
+			});
+		});
+	};
+
+	/**
+	 * init navigate handler
+	 */
+	imagePreviewSlider.prototype._itemNavigate = function( item ) 
+	{
+		this.items.removeClass( 'active' );
+		item.addClass( 'active' );
+		
+		var index 	 = item.data( 'index' );
+		this.index   = index;
+		this.current = this.items[index];
+		
+		this.dd.setStep( this.index+1,0 );
 	};
 
 	/**

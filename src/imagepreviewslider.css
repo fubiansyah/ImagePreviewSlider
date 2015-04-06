@@ -31,23 +31,3 @@
 .preview-slider ._item:hover {
   cursor: pointer;
 }
-.products {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.products .product {
-  margin-bottom: 15px;
-  text-align: center;
-}
-.products .product-inner {
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-}
-.products .product-top {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-.products .product-info {
-  padding: 15px;
-  margin-top: 10px;
-}

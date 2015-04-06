@@ -27,12 +27,13 @@ module.exports = function(grunt) {
             main: {
                 options: {
                     paths: [
-                        "test/css/less"
+                        "src/less",
+                        "test/css/less",
                     ],
                     compress: false
                 },
                 files: {
-                    //community
+                    "src/imagepreviewslider.css": "src/less/imagepreviewslider.less",
                     "test/css/style.css": "test/css/less/main.less",
                 }
             }
@@ -53,7 +54,10 @@ module.exports = function(grunt) {
                 },
             },
             doless: {
-                files: ['test/css/**/*.less'],
+                files: [
+									'test/css/**/*.less',
+									'src/**/*.less'
+								],
                 tasks: ['less'],
                 options: {
                     spawn: false,
