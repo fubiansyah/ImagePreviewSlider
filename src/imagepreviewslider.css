@@ -31,3 +31,22 @@
 .preview-slider ._item:hover {
   cursor: pointer;
 }
+._indicator {
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+._indicator ._item {
+  float: left;
+  height: 3px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+._indicator ._item.active {
+  background-color: #000000;
+}

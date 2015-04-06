@@ -96,6 +96,11 @@
 		//
 		//Init item nav
 		this._initNavigation();
+		
+		//
+		//
+		//Init indicator
+		this._initIndicator();
 	};
 
 	/**
@@ -126,6 +131,7 @@
 		this.index = this.dd.getStep()[0] - 1;
 		this.current = this.items[this.index];
 		$( this.current ).addClass( 'active' );
+		this._changeIndicator();
 	};
 
 	/**
@@ -157,6 +163,38 @@
 		this.current = this.items[index];
 		
 		this.dd.setStep( this.index+1,0 );
+		this._changeIndicator();
+	};
+
+	/**
+	 * init indicator
+	 */
+	imagePreviewSlider.prototype._initIndicator = function() 
+	{
+		var count = this.itemCount;
+		var width = 100/count;
+		var indicator = $( '<div class="_indicator clearfix"></div>' );
+		for( var i = 0; i < count; i++ )
+		{
+			indicator.append(
+				$( '<div class="_item"></div>' )
+					.width( width + '%' )
+			);
+		}
+		this.el.after( indicator );
+		this.indicators = indicator.find( '._item' );
+		var current = this.indicators[this.index];
+		$( current ).addClass( 'active' );
+	};
+
+	/**
+	 * change indicator
+	 */
+	imagePreviewSlider.prototype._changeIndicator = function() 
+	{
+		$( this.indicators ).removeClass( 'active' );
+		var current = this.indicators[this.index];
+		$( current ).addClass( 'active' );
 	};
 
 	/**
