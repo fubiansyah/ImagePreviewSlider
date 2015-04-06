@@ -1,0 +1,101 @@
+//=====================================================================
+//Mixins Shortcode
+//=====================================================================
+
+//Border shortcode
+.bo( @color; @width: 1px; @style: solid ) {
+    border: @width @style @color;
+}
+.bot( @color; @width: 1px; @style: solid ) {
+    border-top: @width @style @color;
+}
+.bob( @color; @width: 1px; @style: solid ) {
+    border-bottom: @width @style @color;
+}
+.bol( @color; @width: 1px; @style: solid ) {
+    border-left: @width @style @color;
+}
+.bor( @color; @width: 1px; @style: solid ) {
+    border-right: @width @style @color;
+}
+.bo0() {
+    border: 0 none;
+}
+.bot0() {
+    border-top: 0 none;
+}
+.bob0() {
+    border-bottom: 0 none;
+}
+.bol0() {
+    border-left: 0 none;
+}
+.bor0() {
+    border-right: 0 none;
+}
+
+//Border color shortcode
+.boc( @color ) {
+    border-color:  @color;
+}
+.boct( @color ) {
+    border-top-color:  @color;
+}
+.bocb( @color ) {
+    border-bottom-color:  @color;
+}
+.bocl( @color ) {
+    border-left-color:  @color;
+}
+.bocr( @color ) {
+    border-right-color:  @color;
+}
+.boc0() {
+    .boc( transparent );
+}
+.boct0() {
+    .boct( transparent );
+}
+.bocb0() {
+    .bocb( transparent );
+}
+.bocl0() {
+    .bocl( transparent );
+}
+.bocr0() {
+    .bocr( transparent );
+}
+
+//Border width shortcode
+.bow( @width ) {
+    border-width:  @width;
+}
+.bowt( @width ) {
+    border-top-width:  @width;
+}
+.bowb( @width ) {
+    border-bottom-width:  @width;
+}
+.bowl( @width ) {
+    border-left-width:  @width;
+}
+.bowr( @width ) {
+    border-right-width:  @width;
+}
+
+//Border style shortcode
+.bos( @style ) {
+    border-style:  @style;
+}
+.bost( @style ) {
+    border-top-style:  @style;
+}
+.bosb( @style ) {
+    border-bottom-style:  @style;
+}
+.bosl( @style ) {
+    border-left-style:  @style;
+}
+.bosr( @style ) {
+    border-right-style:  @style;
+}

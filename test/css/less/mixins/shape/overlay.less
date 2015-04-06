@@ -1,0 +1,22 @@
+//=====================================================================
+// Overlay
+//=====================================================================
+#overlay {
+    
+    ._base( @bgcolor; @zindex: 9999 ) {
+        .bgc( @bgcolor );
+        .pof;
+        .t0;
+        .l0;
+        .b0;
+        .r0;
+        .p0;
+        .zi( @zindex );
+    }
+    .light( @opacity: 0.9; @zindex: 9999 ) {
+        #overlay > ._base( rgba(255,255,255,@opacity); @zindex );
+    }
+    .dark( @opacity: 0.9; @zindex: 9999 ) {
+        #overlay > ._base( rgba(0,0,0,@opacity); @zindex );
+    }
+}

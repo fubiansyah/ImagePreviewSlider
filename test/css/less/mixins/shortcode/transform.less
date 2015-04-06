@@ -1,0 +1,60 @@
+//=====================================================================
+// Transform
+//=====================================================================
+.translate( @x; @y ) {
+    @val: translate( @x, @y );
+    .browser-ext( transform, @val );
+}
+.translateX( @x ) {
+    @val: translateX( @x );
+    .browser-ext( transform, @val );
+}
+.translateY( @y ) {
+    @val: translateY( @y );
+    .browser-ext( transform, @val );
+}
+.rotate( @deg ) {
+    @val: rotate( @deg );
+    .browser-ext( transform, @val );
+}
+.rotateX( @deg ) {
+    @val: rotateX( @deg );
+    .browser-ext( transform, @val );
+}
+.rotateY( @deg ) {
+    @val: rotateY( @deg );
+    .browser-ext( transform, @val );
+}
+.rotateZ( @deg ) {
+    @val: rotateZ( @deg );
+    .browser-ext( transform, @val );
+}
+.scale( @x; @y ) {
+    @val: scale( @x, @y );
+    .browser-ext( transform, @val );
+}
+.scaleX( @x ) {
+    @val: scaleX( @x );
+    .browser-ext( transform, @val );
+}
+.scaleY( @y ) {
+    @val: scaleX( @y );
+    .browser-ext( transform, @val );
+}
+.skew( @x-angle; @y-angle ) {
+    @val: skew( @x-angle, @y-angle );
+    .browser-ext( transform, @val );
+}
+.skewX( @angle ) {
+    @val: skewX( @angle );
+    .browser-ext( transform, @val );
+}
+.skewY( @angle ) {
+    @val: skewX( @angle );
+    .browser-ext( transform, @val );
+}
+
+.origin( @x; @y ) {
+    @val: @x @y;
+    .browser-ext( transform-origin, @val );
+}

@@ -1,0 +1,35 @@
+//=====================================================================
+// Box Shadow shortcode
+//=====================================================================
+.bs( @arg ) {
+    .browser-ext( box-shadow, @arg );
+}
+.bs0() {
+    .bs( none );
+}
+
+// Box Shadow function
+//=====================================================================
+#box-shadow {
+
+    .outer( @h; @v; @blur; @spread; @color ) {
+        @arg: @h @v @blur @spread @color;
+        .bs( @arg );
+    }
+    .inner( @h; @v; @blur; @spread; @color ) {
+        @arg: inset @h @v @blur @spread @color;
+        .bs( @arg );
+    }
+    .outerY( @blur; @spread; @color ) {
+        @arg: 0 @blur @spread @color;
+        .bs( @arg );
+    }
+    .innerY( @blur; @spread; @color ) {
+        @arg: inset 0 @blur @spread @color;
+        .bs( @arg );
+    }
+    .edge( @size; @blur: 6px; @color: black ) {
+        @arg: 0 @size @blur -@blur @color;
+        .bs( @arg );
+    }
+}

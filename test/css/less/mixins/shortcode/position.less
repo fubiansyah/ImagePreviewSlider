@@ -1,0 +1,72 @@
+//=====================================================================
+//Position shortcode
+//=====================================================================
+//Position shortcode
+.po( @type ) {
+    position: @type;
+}
+.por() {
+    position: relative;
+}
+.poa() {
+    position: absolute;
+}
+.pof() {
+    position: fixed;
+}
+.pos() {
+    position: static;
+}
+
+//Top shortcode
+.t( @size ) {
+    top: @size;
+}
+.t0(){
+    .t(0);
+}
+//Bottom shortcode
+.b( @size ) {
+    bottom: @size;
+}
+.b0() {
+    .b(0);
+}
+//Left shortcode
+.l( @size ) {
+    left: @size;
+}
+.l0() {
+    .l(0);
+}
+//Right shortcode
+.r( @size ) {
+    right: @size;
+}
+.r0() {
+    .r(0);
+}
+//Horizontal position shortcode
+.x( @l; @r ) {
+    .l( @l );
+    .r( @r );
+}
+.x0() {
+    .x(0; 0);
+}
+//Vertical position shortcode
+.y( @t; @b ) {
+    .t( @t );
+    .b( @b );
+}
+.y0() {
+    .y(0; 0);
+}
+//All position shortcode
+.xy( @t; @r; @b; @l ) {
+    .x( @l; @r );
+    .y( @t; @b );
+}
+.xy0() {
+    .xy(0; 0; 0; 0);
+}

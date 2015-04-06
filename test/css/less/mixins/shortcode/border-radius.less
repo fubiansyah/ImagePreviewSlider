@@ -1,0 +1,39 @@
+//=====================================================================
+// Border Radius shortcode
+//=====================================================================
+.rad( @radius ) {
+    .browser-ext( border-radius; @radius );
+}
+.rad0() {
+    .rad(0);
+}
+
+#rad {
+    .full( @size ) {
+        .rad( @size );
+    }
+    .top( @size ) {
+        .rad( @size @size 0 0 );
+    }
+    .bottom( @size ) {
+        .rad( 0 0 @size @size );
+    }
+    .left( @size ) {
+        .rad( @size 0 0 @size );
+    }
+    .right( @size ) {
+        .rad( 0 @size @size 0 );
+    }
+    .top-left( @size ) {
+        .rad( @size 0 0 0 );
+    }
+    .top-right( @size ) {
+        .rad( 0 @size 0 0 );
+    }
+    .bottom-left( @size ) {
+        .rad( 0 0 0 @size );
+    }
+    .bottom-right( @size ) {
+        .rad( 0 0 @size 0 );
+    }
+}

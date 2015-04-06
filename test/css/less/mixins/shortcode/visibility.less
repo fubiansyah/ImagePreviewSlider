@@ -1,0 +1,12 @@
+//=====================================================================
+//Visibility shortcode
+//=====================================================================
+.vi( @visible: 1 ) when ( @visible = 1 ) {
+    visibility: visible;
+}
+.vi( @visible: 1 ) when ( @visible = 0 ) {
+    visibility: hidden;
+}
+.vi( @visible: 1 ) when not ( @visible = 0 ) and not ( @visible = 1 ) {
+    visibility: @visible;
+}

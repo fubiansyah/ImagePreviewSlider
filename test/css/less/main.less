@@ -1,0 +1,27 @@
+//
+//Import all mixins
+@import 'mixins/mixins.less'; 
+
+//
+//Product lists
+.products {
+  .my( 30px );
+  
+  .product {
+    .mb( 15px );
+    .tac;
+    
+    &-inner {
+      .bgc( #ffffff );
+      .bo( #cccccc );
+    }
+    
+    &-top {
+      .py( 15px );
+    }
+    &-info {
+      .p( 15px );
+      .mt( 10px );
+    }
+  }
+}

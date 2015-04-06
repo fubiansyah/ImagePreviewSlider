@@ -1,0 +1,31 @@
+//=====================================================================
+// Arrow
+//=====================================================================
+#arrow {
+    ._base( @size: 10px ) {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        border-width: @size;
+        position: absolute;
+    }
+    .up( @color; @size: 10px ) {
+        #arrow > ._base( @size );
+        border-bottom-color: @color;
+    }
+    .down( @color; @size: 10px ) {
+        #arrow > ._base( @size );
+        border-top-color: @color;
+    }
+    .left( @color; @size: 10px ) {
+        #arrow > ._base( @size );
+        border-right-color: @color;
+    }
+    .right( @color; @size: 10px ) {
+        #arrow > ._base( @size );
+        border-left-color: @color;
+    }
+}

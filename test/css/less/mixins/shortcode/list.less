@@ -1,0 +1,19 @@
+//=====================================================================
+//List Style shortcode
+//=====================================================================
+.ls( @attr ) {
+    list-style: @attr;
+}
+.ls0() {
+    .ls( none );
+}
+.lst( @type ) {
+    list-style-type: @type;
+}
+.lsp( @pos ) {
+    list-style-position: @pos;
+}
+.lsi( @path; @root: @root-image-path ) {
+    @src: ~"@{root}@{path}";
+    list-style-image: @src;
+}

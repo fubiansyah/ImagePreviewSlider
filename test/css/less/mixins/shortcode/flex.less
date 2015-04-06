@@ -1,0 +1,66 @@
+//=====================================================================
+// Mixins Functions
+//=====================================================================
+.flex-display() {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+.flex( @attr; @width: 0 ) when ( @width = 0 ) {
+    -webkit-box-flex: @attr;      /* OLD - iOS 6-, Safari 3.1-6 */
+       -moz-box-flex: @attr;      /* OLD - Firefox 19- */
+    -webkit-flex: @attr;          /* Chrome */
+        -ms-flex: @attr;          /* IE 10 */
+            flex: @attr;   
+}
+.flex( @attr; @width: 0 ) when not ( @width = 0 ) {
+    -webkit-box-flex: @attr;      /* OLD - iOS 6-, Safari 3.1-6 */
+       -moz-box-flex: @attr;      /* OLD - Firefox 19- */
+    width: @width;                /* For old syntax, otherwise collapses. */
+    -webkit-flex: @attr;          /* Chrome */
+        -ms-flex: @attr;          /* IE 10 */
+            flex: @attr;   
+}
+
+.flex-align( @align ) {
+      -webkit-box-align: @align;
+         -moz-box-align: @align; /* OLD… */
+         -ms-flex-align: @align; /* You know the drill now… */
+    -webkit-align-items: @align;
+            align-items: @align;
+}
+
+.flex-justify( @justify ) {
+           -webkit-box-pack: @justify; 
+              -moz-box-pack: @justify;
+              -ms-flex-pack: @justify;
+    -webkit-justify-content: @justify;
+            justify-content: @justify;
+}
+
+.flex-ordinal( @ordinal ) {
+    -webkit-box-ordinal-group: abs( @ordinal ); /* old spec; must be positive */
+       -moz-box-ordinal-group: abs( @ordinal );
+               -ms-flex-order: @ordinal;        /* IE 10 syntax */
+           -webkit-flex-order: @ordinal;        /* IE 10 syntax */
+                        order: @ordinal;        /* new syntax */
+}
+
+
+//=====================================================================
+// Mixins Shortcode
+//=====================================================================
+.fxd() {
+    .flex-display();
+}
+.fx( @attr; @width: 0 ) {
+    .flex( @attr; @width );
+}
+.fxa( @align ) {
+    .flex-align( @align );
+}
+.fxj( @justify ) {
+    .flex-justify( @justify );
+}

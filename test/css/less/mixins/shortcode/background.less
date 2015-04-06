@@ -1,0 +1,38 @@
+//=====================================================================
+//Background
+//=====================================================================
+//Background shortcode
+.bg( @attr ) {
+    background: @attr;
+}
+//Background color shortcode
+.bgc( @color ) {
+    background-color: @color;
+}
+.bgc0() {
+    background-color: transparent;
+}
+.bgc-rgba( @r; @g; @b; @amount ) {
+    background-color: rgba(@r,@g,@b,@amount);
+}
+//Background image shortcode
+.bgi( @src ) {
+    background-image: url("@{src}");
+}
+.bgi0() {
+    background-image: none;
+}
+//Background position shortcode
+.bgp( @x; @y ) {
+    background-position: @x @y;
+}
+.bgp0() {
+    .bgp( 0; 0 );
+}
+//Background repeat shortcode
+.bgr( @repeat ) {
+    background-repeat: @repeat;
+}
+.bgr0() {
+    background-repeat: no-repeat;
+}

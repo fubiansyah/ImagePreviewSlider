@@ -1,0 +1,56 @@
+//=====================================================================
+//Padding shortcode
+//=====================================================================
+.p( @size ) {
+    padding: @size;
+}
+//Padding top
+.pt( @size ) {
+    padding-top: @size;
+}
+//Padding bottom
+.pb( @size ) {
+    padding-bottom: @size;
+}
+//Padding left
+.pl( @size ) {
+    padding-left: @size;
+}
+//Padding right
+.pr( @size ) {
+    padding-right: @size;
+}
+//Padding horizontal
+.px( @size ) {
+    padding-left: @size;
+    padding-right: @size;
+}
+//Padding vertical
+.py( @size ) {
+    padding-top: @size;
+    padding-bottom: @size;
+}
+//Margin clear
+.p0() {
+    .p(0);
+}
+.pt0() {
+    .pt(0);
+}
+.pb0() {
+    .pb(0);
+}
+.pl0() {
+    .pl(0);
+}
+.pr0() {
+    .pr(0);
+}
+.py0() {
+    .pt(0);
+    .pb(0);
+}
+.px0() {
+    .pl(0);
+    .pr(0);
+}

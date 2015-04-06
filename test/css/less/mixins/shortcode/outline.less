@@ -1,0 +1,18 @@
+//=====================================================================
+//Outline shortcode
+//=====================================================================
+.ol( @color; @width: 1px; @style: dotted ) {
+    outline: @width @style @color;
+}
+.olc ( @color ) {
+    outline-color: @color;
+}
+.olw ( @width: 1px ) {
+    outline-width: @width;
+}
+.ols ( @style: dotted ) {
+    outline-style: @style;
+}
+.ol0() {
+    outline: 0 none;
+}

@@ -1,0 +1,29 @@
+//=====================================================================
+//Font shortcode
+//=====================================================================
+.f( @attr ) {
+    font: @attr;
+}
+//Font size shortcode
+.fs( @size ) {
+    font-size: @size;
+}
+//Font family shortcode
+.ff( @family ) {
+    font-family: @family;
+}
+//Font weight shortcode
+.fb( @weight: bold ) {
+    font-weight: @weight;
+}
+.fb0() {
+    .fb( normal );
+}
+//Font style shortcode
+.fi( @style: italic ) {
+    font-style: @style;
+}
+.fi0() {
+    .fi( normal );
+}
+

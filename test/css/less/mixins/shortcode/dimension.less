@@ -1,0 +1,60 @@
+//=====================================================================
+//Dimension Shortcode
+//=====================================================================
+//
+//Width shortcode
+.w( @w ) {
+    width: @w;
+}
+.wp( @w; @d: 1 ) {
+    .set-percent( width; @w; @d );
+}
+.w0() {
+    .w(0);
+}
+//Width auto
+.wa() {
+    .w( auto );
+}
+//Width full
+.wf() {
+    .w( 100% );
+}
+
+//
+//Height shortcode
+.h( @h ) {
+    height: @h;
+}
+.hp( @h; @d: 1 ) {
+    .set-percent( height; @h; @d );
+}
+.h0() {
+    .h(0);
+}
+//Height auto
+.ha() {
+    .h( auto );
+}
+//Height + line height
+.hlh( @size ) {
+    .h( @size );
+    .lh( @size );
+}
+//Height full
+.hf() {
+    .h( 100% );
+}
+
+//Size shortcode
+.sz( @w; @h ) {
+    .w( @w );
+    .h( @h );
+}
+.sz0() {
+    .sz(0);
+}
+//Size auto
+.sza() {
+    .sz( auto );
+}
